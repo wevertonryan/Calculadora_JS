@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculadora">
+        <table>
+            <tbody class="calc_digitos">
+                <tr></tr>
+                <tr></tr>
+                <tr class="linha">
+                    <td class="digito" data-valor="porcentagem">%</td>
+                    <td class="digito" data-valor="potencia">^</td>
+                    <td class="digito" data-valor="raiz">√</td>
+                    <td class="digito" data-valor="clear">C</td>
+                </tr>
+                <tr class="linha">
+                    <td class="digito" data-valor="divisao">÷</td>
+                    <td class="digito" data-valor="7" data-tipo="numero">7</td>
+                    <td class="digito" data-valor="8" data-tipo="numero">8</td>
+                    <td class="digito" data-valor="9" data-tipo="numero">9</td>
+                </tr>
+                <tr class="linha">
+                    <td class="digito" data-valor="multiplicacao">×</td>
+                    <td class="digito" data-valor="4" data-tipo="numero">4</td>
+                    <td class="digito" data-valor="5" data-tipo="numero">5</td>
+                    <td class="digito" data-valor="6" data-tipo="numero">6</td>
+                </tr>
+                <tr class="linha">
+                    <td class="digito" data-valor="subtracao">-</td>
+                    <td class="digito" data-valor="1" data-tipo="numero">1</td>
+                    <td class="digito" data-valor="2" data-tipo="numero">2</td>
+                    <td class="digito" data-valor="3" data-tipo="numero">3</td>
+                </tr>
+                <tr class="linha">
+                    <td class="digito" data-valor="adicao">+</td>
+                    <td class="digito" data-valor=",">,</td>
+                    <td class="digito" data-valor="0" data-tipo="numero">0</td>
+                    <td class="digito" data-valor="resultado">=</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="output"></div>
+</body>
+</html>
