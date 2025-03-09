@@ -5,9 +5,18 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .calculadora {
+    border-radius: 10px;
+    overflow: hidden;
     height: 700px;
-    width: 400px;
+    width: 500px;
     background-color: rgb(51, 51, 51);
     color: white;
     font-family: "Poppins", sans-serif;
@@ -21,24 +30,25 @@
     width: 100%;
 }
 
-.calc_digitos {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.calc_digitos tr {
+    height: 14%;
 }
 
-.calc_digitos tr, .calc_digitos tr td{
-    display: flex;
-    height: 100%;
-    width: 100%;
+.calc_digitos tr td {
+    text-align: center;
+    width: 20%;
 }
+
 
 .calc_digitos tr td{
-    justify-content: center;
-    align-items: center;
-    border: solid 1px rgb(20, 20, 20);
+    outline: solid 1px rgb(20, 20, 20);
 }
 
 .calc_digitos tr td:hover{
     background-color: rgb(29, 29, 29);
+}
+
+#console {
+    text-align: end;
+    height: 28%;
 }

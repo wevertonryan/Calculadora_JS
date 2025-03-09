@@ -11,41 +11,42 @@
     <div class="calculadora">
         <table>
             <tbody class="calc_digitos">
-                <tr></tr>
-                <tr></tr>
+                <tr id="console"></tr>
                 <tr class="linha">
                     <td class="digito" data-valor="porcentagem">%</td>
-                    <td class="digito" data-valor="potencia">^</td>
-                    <td class="digito" data-valor="raiz">√</td>
+                    <td class="digito" data-valor="parentese_abrir">(</td>
+                    <td class="digito" data-valor="parentese_fechar" data-tipo="operador_composto">)</td>
                     <td class="digito" data-valor="clear">C</td>
+                    <td class="digito" data-valor="erase" data-tipo="operador_composto">⌫</td>
                 </tr>
                 <tr class="linha">
-                    <td class="digito" data-valor="divisao">÷</td>
+                    <td class="digito" data-valor="divisao" data-tipo="operador_composto">÷</td>
                     <td class="digito" data-valor="7" data-tipo="numero">7</td>
                     <td class="digito" data-valor="8" data-tipo="numero">8</td>
                     <td class="digito" data-valor="9" data-tipo="numero">9</td>
+                    <td class="digito" data-valor="potencia" data-tipo="operador_composto">^</td>
                 </tr>
                 <tr class="linha">
-                    <td class="digito" data-valor="multiplicacao">×</td>
+                    <td class="digito" data-valor="multiplicacao" data-tipo="operador_composto">×</td>
                     <td class="digito" data-valor="4" data-tipo="numero">4</td>
                     <td class="digito" data-valor="5" data-tipo="numero">5</td>
                     <td class="digito" data-valor="6" data-tipo="numero">6</td>
+                    <td class="digito" data-valor="raiz" data-tipo="operador_composto">√</td>
                 </tr>
                 <tr class="linha">
-                    <td class="digito" data-valor="subtracao">-</td>
+                    <td class="digito" data-valor="subtracao" data-tipo="operador_simples">-</td>
                     <td class="digito" data-valor="1" data-tipo="numero">1</td>
                     <td class="digito" data-valor="2" data-tipo="numero">2</td>
                     <td class="digito" data-valor="3" data-tipo="numero">3</td>
+                    <td class="digito" data-valor="resultado" rowspan="2" style="background-color: rgb(0, 162, 255); color: black;">=</td>
                 </tr>
                 <tr class="linha">
-                    <td class="digito" data-valor="adicao">+</td>
+                    <td class="digito" data-valor="adicao" data-tipo="operador_simples">+</td>
+                    <td class="digito" data-valor="0" data-tipo="numero" colspan="2">0</td>
                     <td class="digito" data-valor=",">,</td>
-                    <td class="digito" data-valor="0" data-tipo="numero">0</td>
-                    <td class="digito" data-valor="resultado">=</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div id="output"></div>
 </body>
 </html>

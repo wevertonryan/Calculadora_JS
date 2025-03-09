@@ -1,37 +1,47 @@
-/*let map_calculadora = [];
+let calculo = {
+  digito_calc: [0],
+  tipo_calc: ["primeira_posicao"],
+};
 
-const linhas = document.querySelectorAll(".linha");
-linhas.forEach((elementos, indice)=>{
-    map_calculadora[indice] = elementos.querySelectorAll("td");
-})
+let parenteses = {
+    abrir: [],
+    fechar: []
+};
 
-map_calculadora[0][0].addEventListener("click", blabla)
-map_calculadora[0][1].addEventListener("click", blabla)
-map_calculadora[0][2].addEventListener("click", blabla)
-map_calculadora[0][3].addEventListener("click", blabla)
+function clicar_digito_calc(event) {
+  const digito = event.srcElement.dataset.valor;
+  const tipo = event.srcElement.dataset.tipo;
+  const tamanhoArray = calculo["digito_calc"].length;
+  const ultimoItem = {
+    digito_calc: calculo["digito_calc"][tamanhoArray - 1],
+    tipo_calc: calculo["tipo_calc"][tamanhoArray - 1],
+  };
 
-map_calculadora[1][0].addEventListener("click", blabla)
-map_calculadora[1][1].addEventListener("click", blabla)
-map_calculadora[1][2].addEventListener("click", blabla)
-map_calculadora[1][3].addEventListener("click", blabla)
+  if(tipo == "numero" || digito == "raiz"){
+    calculo["digito_calc"].push(digito)
+    if (digito == "raiz"){
+        parenteses++;
+    }
+  }
 
-map_calculadora[2][0].addEventListener("click", blabla)
-map_calculadora[2][1].addEventListener("click", blabla)
-map_calculadora[2][2].addEventListener("click", blabla)
-map_calculadora[2][3].addEventListener("click", blabla)
+  switch (ultimoItem["tipo_calc"]) {
+    case "primeira_posicao":
+    case "operador_composto":
+      switch (digito) {
+        case "subtracao":
+        case "raiz":
+          break;
+        default:
+      }
+      break;
+    case "operador_simples":
+      break;
+    default:
+  }
 
-map_calculadora[3][0].addEventListener("click", blabla)
-map_calculadora[3][1].addEventListener("click", blabla)
-map_calculadora[3][2].addEventListener("click", blabla)
-map_calculadora[3][3].addEventListener("click", blabla)
-
-map_calculadora[4][0].addEventListener("click", blabla)
-map_calculadora[4][1].addEventListener("click", blabla)
-map_calculadora[4][2].addEventListener("click", blabla)
-map_calculadora[4][3].addEventListener("click", blabla)*/
-
-function clicar_digito_calc(event){
-    const digito = event.srcElement.dataset.valor;
+  document.getElementById("console").innerHTML = `
+    <td colspan="5" style="max-width: 400px; text-align: end;">${calculo["digito_calc"]}</td>
+  `;
 }
 
-document.addEventListener("click", clicar_digito_calc)
+document.addEventListener("click", clicar_digito_calc);
